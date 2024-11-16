@@ -4,84 +4,29 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-body {
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-
-  100% {
-      opacity: 1;
-  }
-}
-img{
-  width:7% ;
-  opacity: 60%;
-  transition: 1s;
-}
-img:hover{
-    opacity: 100%;
-    transform: scale(120%);
+.img1{
+    margin-top: 10px;
+    width:10% ;
+    opacity: 80%;
     transition: 1s;
 }
-.img20 {
-  width: 1.1%;
-  position: relative;
-  left: -600px;
-  top: -84px;
-  opacity: 60%;
-  transition: 0.5s;
-}
-.img20:hover {
-  opacity: 100%;
-  transition: 0.5s;
+.img1:hover{
+    opacity: 100%;
+    transform: scale(105%);
+    transition: 1s;
+
 }
 #main {
     background-size: cover;
-    background-color: black;
+    background-color: white;
     text-align: center;
 }
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input, form textarea {
-    width: 60%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 15px 30px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-form button:hover {
-    background-color: white;
-    color: black;
-    transition: 1s;
-}
 footer {
-    background-color:white;
-    color: black;
+    background-color:rgb(73, 24, 24);
+    color: white;
     text-align: center;
     padding: 20px;
 }
-
 footer p {
     margin: 0;
 }
@@ -93,7 +38,7 @@ footer p {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #111; /* Black*/
     overflow-x: hidden; 
     padding-top: 300px; 
     transition: 1s; 
@@ -155,6 +100,49 @@ footer p {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
-  .container {
-    color: white;
-  }
+
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    top: -80px;
+}
+
+
+.image-item {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.image-item:hover img {
+    transform: scale(1.05);
+}
+
+.text {
+    font-size: 60px;
+    color: black;
+    position: relative;
+    top: -60px;
+}
+.text2 {
+    font-size: 30px;
+    color: black;
+}
+.text3 {
+    font-size: 20px;
+    color: #636363;
+}
