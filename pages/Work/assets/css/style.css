@@ -4,144 +4,148 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-img{
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+.img1{
     margin-top: 10px;
     width:10% ;
     opacity: 80%;
     transition: 1s;
 }
-img:hover{
+.img1:hover{
     opacity: 100%;
     transform: scale(105%);
     transition: 1s;
 
 }
-#main {
-    background-size: cover;
-    background-color: white;
-    text-align: center;
-}
-.container {
+.img20 {
+  width: 1.1%;
   position: relative;
-  top: -80px
+  left: -600px;
+  top: -84px;
+  opacity: 60%;
+  transition: 0.5s;
 }
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 30px;
+.img20:hover {
+  opacity: 100%;
+  transition: 0.5s;
 }
-.product-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+#main {
+  background-size: cover;
+  background-color: black;
+  text-align: center;
+}footer {
+  background-color:white;
+  color: black;
+  text-align: center;
+  padding: 10px;
 }
-.product-card:hover {
-    transform: translateY(-10px);
-}
-.product-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.product-card p {
-    font-size: 22px;
-    margin-top: 35px;
-}
-.product-card a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #ff6f61;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 1s;
-}
-.product-card a:hover {
-    background-color: rgb(73, 24, 24);
-    transition: 1s;
-}
-footer {
-    background-color:rgb(73, 24, 24);
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+
 footer p {
-    margin: 0;
+  margin: 0;
 }
 
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; 
-    padding-top: 300px; 
-    transition: 1s; 
-  }
-  
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; 
+  padding-top: 300px; 
+  transition: 1s; 
+}
 
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
 
-  .sidebar a:hover {
-    color: white;
-  }
-  
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
 
-  .openbtn {
-    position: relative;
-    left: -620px;
-    top: -80px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    opacity: 60%;
-    transition: 0.5s;
-  }
-  
-  .openbtn:hover {
-    background-color: black;
-    opacity: 100%;
-    transition: 0.5s;
-  }
-  
+.sidebar a:hover {
+  color: white;
+}
 
-  #main {
-    transition: margin-left 1s; 
-    padding: 20px;
-  }
-  
 
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.openbtn {
+  position: relative;
+  left: -620px;
+  top: -80px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  opacity: 60%;
+  transition: 0.5s;
+}
+
+.openbtn:hover {
+  background-color: black;
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+
+#main {
+  transition: margin-left 1s; 
+  padding: 20px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.container {
+  color: white;
+
+}
+.text1 { 
+padding-top: 50px;
+font-size: 35px;
+color: white;
+}
+
+div.scroll-container {
+  background-color: #0c0c0c;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  margin-bottom: 150px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
